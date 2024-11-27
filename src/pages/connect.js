@@ -31,21 +31,32 @@ export default function connect() {
         <p class="xanh-mono-regular text-sm">@blubtatu</p>
       </div>
 
-      <div>
-        <p class="header">
-          favorite genres
-        </p>
-        <p class="header">
-          recently played
-        </p>
-        <p class="header">
-          pairings
-        </p>
-      </div>
+      <div class="flex flex-1">
+        <aside class="bg-slate-200 text-black w-1/4 p-6 flex flex-col items-center m-4 rounded-lg">
+        <div>
+          <h2 className="roboto-medium text-2xl">Pairings</h2>
+        </div>  
+        </aside>
 
+      <main class="flex-1 p-6">
+        <section class="bg-slate-200 text-black w-7/8 p-6 flex flex-col items-center mt-2 rounded-lg">
+          <h2 class="roboto-medium text-2xl mb-4">Recent Genres</h2>
+          <div class="grid grid-cols-5 gap-4">
+            <div class="bg-white p-4 rounded-lg">Genre 1</div>
+            <div class="bg-white p-4 rounded-lg">Genre 2</div>
+            <div class="bg-white p-4 rounded-lg">Genre 3</div>
+            <div class="bg-white p-4 rounded-lg">Genre 4</div>
+            <div class="bg-white p-4 rounded-lg">Genre 5</div>
+          </div>
+        </section>
+
+        <section class="bg-slate-200 text-black w-7/8 p-6 flex flex-col items-center mt-4 rounded-lg">
+          <h2 class="roboto-medium text-2xl mb-4">Recent Games Played</h2>
+        </section>
+      </main>
+      </div>
     
     </div>
-
 
   );
 };
