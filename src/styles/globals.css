@@ -119,3 +119,7 @@ body {
 .header{
   @apply roboto-medium text-black text-2xl mx-8 mt-4
 }
+
+.custom-shadow{
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
