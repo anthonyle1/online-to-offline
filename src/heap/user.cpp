@@ -40,11 +40,11 @@ class UserInformation{
         }
         
         for (const auto& id : userbygame[gameid]) {
-            if (id != userid) { // Exclude the current user
-                cout << "- User ID: " << id << endl;
+            if (id != userid) { // exclude's the current user we're using to find pairs for
+                //test print
+                cout << "user pairs with id: " << id << endl;
             }
         }
-        
     }
 
     void reccommendUsersbyGenre(){
