@@ -1,11 +1,27 @@
 import Image from "next/image";
 import localFont from "next/font/local";
-import React from 'react';
+import React, { useEffect, useState } from 'react'; 
 
 let name = "Anthony";
 let image = "Screenshot 2024-11-27 005249.png"
 
 export default function connect() {
+  const [genres, setGenres] = useState([]); // Store favorite genres
+  const [recentlyPlayed, setRecentlyPlayed] = useState([]); // Store recently played games
+
+  let name = "Anthony";
+  let image = "Screenshot 2024-11-27 005249.png";
+
+  // Fetch data on component mount
+  useEffect(() => {
+    // Fetch genres
+    fetch("http://localhost:8080/genres/sorted")  // Replace with your backend API URL
+      .then(response => response.json())
+      .then(data => {
+        setGenres(data.genres);  // Set genres based on the API response
+      })
+      .catch(error => console.error('Error fetching genres:', error));
+  }, []);  // Empty dependency array to only fetch once on mount
   return (
 
     <div class="bg-white  text-left text-black h-screen justify-center">
@@ -35,9 +51,19 @@ export default function connect() {
         <p class="header">
           favorite genres
         </p>
+        <ul>
+          {genres.map((genre, index) => (
+            <li key={index} className="text-lg">{genre.name}</li>
+          ))}
+        </ul>
         <p class="header">
           recently played
         </p>
+        <ul>
+          {recentlyPlayed.map((game, index) => (
+            <li key={index} className="text-lg">{game.name} - {new Date(game.lastPlayed * 1000).toLocaleString()}</li>
+          ))}
+        </ul>
         <p class="header">
           pairings
         </p>
@@ -49,4 +75,3 @@ export default function connect() {
 
   );
 };
-

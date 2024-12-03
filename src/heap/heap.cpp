@@ -3,6 +3,7 @@
 #include <string>
 #include <algorithm>
 #include <utility>
+#include "crow_all.h"
 
 struct Genre {
     std::string name;
@@ -63,3 +64,33 @@ public:
 
     bool empty() const { return heap.empty(); }
 };
+
+int main() {
+    MaxHeap genreHeap;
+    
+    // Adding dummy data for testing
+    genreHeap.insert({"Action", 1698745000});
+    genreHeap.insert({"Adventure", 1698756000});
+    genreHeap.insert({"RPG", 1698767000});
+
+    crow::SimpleApp app;
+
+    // Route to get sorted genres
+    CROW_ROUTE(app, "/genres/sorted")([&genreHeap]() {
+        auto sortedGenres = genreHeap.getSortedGenres();
+        crow::json::wvalue response;
+
+        for (const auto& genre : sortedGenres) {
+            response["genres"].push_back({
+                {"name", genre.name},
+                {"lastPlayed", genre.lastPlayed}
+            });
+        }
+
+        return response;
+    });
+
+    app.port(8080).multithreaded().run();
+
+    return 0;
+}
