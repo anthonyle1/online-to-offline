@@ -18,10 +18,9 @@ export default function connect() {
         <p class="xanh-mono-regular-bold text-right align-middle pt-4">
           hello, {name}!</p>
       </div>
-
       <div>
       </div>
-      </div>
+    </div>
 
       <hr class="inline-block w-full border-black border-1 rounded-full m-0 p-0"></hr> 
       </div>
@@ -52,6 +51,8 @@ export default function connect() {
 
         <section class="bg-slate-200 text-black w-7/8 p-6 flex flex-col items-center mt-4 rounded-lg">
           <h2 class="roboto-medium text-2xl mb-4">Recent Games Played</h2>
+          <div class="grid grid-cols-5 gap-4">
+          </div>
         </section>
       </main>
       </div>
