@@ -48,6 +48,8 @@ class UserInformation{
     }
 
     void reccommendUsersbyGenre(){
+        unordered_set<unsigned int> userpairings;
+        
 
     }
 
