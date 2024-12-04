@@ -1,17 +1,33 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 import { useState } from "react";
+import axios from "axios";
 
 
 export default function Home() {
   const [username, setUsername] = useState("");
   const [steamId, setSteamId] = useState("");
+  const [recentGames, setRecentGames] = useState([]);
 
   const handleSaveDetails = () => {
     // Save details to localStorage
     localStorage.setItem("username", username);
     localStorage.setItem("steamId", steamId);
+    fetchRecentGames(steamId);
   };
+
+  const fetchRecentGames = async (steamId) => {
+    const apiKey = "924ECDC4CC643D261E87DA0732BD5A5B";
+    try {
+      const response = await axios.get(apiUrl);
+      const games = response.data.response.games || [];
+      setRecentGames(games);
+    } catch (error) {
+      console.error("Failed to fetch recent games:", error);
+    }
+  };
+
+
   return (
     // home page: 
 
