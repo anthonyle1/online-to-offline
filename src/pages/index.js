@@ -62,29 +62,35 @@ export default function Home() {
         </div>
 
         {/* Input Fields */}
-        <div className="relative mb-6 w-1/2 mx-auto">
-          <input
-            type="text"
-            placeholder="Enter your Steam username (optional)"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            className="border border-black rounded p-2 mb-2 w-1/2"
-          />
-          <br />
-          <input
-            type="text"
-            placeholder="Enter your Steam ID"
-            value={steamId}
-            onChange={handleSteamIdChange}
-            className="border border-black rounded p-2 mb-2 w-1/2"
-          />
-          {/* Conditional rendering of the warning box */}
-          {warningMessage && (
-            <div className="warning-box">
-              <p className="text-red-500 text-sm mt-1">{warningMessage}</p>
-            </div>
-          )}
-        </div>
+<div className="relative mb-6 w-1/2 mx-auto">
+  <input
+    type="text"
+    placeholder="Enter your Steam username (optional)"
+    value={username}
+    onChange={(e) => setUsername(e.target.value)}
+    className="border border-black rounded p-2 mb-2 w-1/2"
+  />
+  <br />
+  <input
+    type="text"
+    placeholder="Enter your Steam ID"
+    value={steamId}
+    onChange={handleSteamIdChange}
+    onKeyDown={(e) => {
+      if (e.key === "Enter") {
+        handleSaveDetails(); // Simulate pressing the "Connect" button
+      }
+    }}
+    className="border border-black rounded p-2 mb-2 w-1/2"
+  />
+  {/* Conditional rendering of the warning box */}
+  {warningMessage && (
+    <div className="warning-box">
+      <p className="text-red-500 text-sm mt-1">{warningMessage}</p>
+    </div>
+  )}
+</div>
+
 
         {/* Buttons */}
         <div className="mt-16">
