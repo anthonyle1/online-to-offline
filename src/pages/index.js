@@ -45,17 +45,6 @@ export default function Home() {
     }
   };
 
-  const fetchRecentGames = async (steamId) => {
-    const apiKey = " ";
-    try {
-      const response = await axios.get(apiUrl);
-      const games = response.data.response.games || [];
-      setRecentGames(games);
-    } catch (error) {
-      console.error("Failed to fetch recent games:", error);
-    }
-  };
-
   return (
     <div className="text-center text-black min-h-screen" style={{backgroundColor: "#fbf7f5"}}>
       {/* Windows-style Menu Bar */}

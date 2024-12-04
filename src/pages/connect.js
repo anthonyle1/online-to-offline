@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { fetchRecentGames, fetchGameGenres } from "./api/steamapi";
 
 export default function Connect() {
   const [genres, setGenres] = useState([]); // Store favorite genres
@@ -15,32 +16,22 @@ export default function Connect() {
     setSteamId(localStorage.getItem("steamId") || "");
   }, []);
 
-  // Fetch genres from the backend
   useEffect(() => {
-    // Fetch genres
-    fetch("http://localhost:8080/api/genres")
-      .then((response) => response.json())
-      .then((data) => {
-        setGenres(data.genres);
-      })
-      .catch((error) => console.error("Error fetching genres:", error));
+    if (steamId) {
+      fetchRecentGamesData(steamId);
+    }
+  }, [steamId]);
 
-    // Fetch recently played games
-    fetch("http://localhost:8080/api/recently-played")
-      .then((response) => response.json())
-      .then((data) => {
-        setRecentlyPlayed(data.recentlyPlayed);
-      })
-      .catch((error) => console.error("Error fetching recently played:", error));
-
-    // Fetch pairings
-    fetch("http://localhost:8080/api/pairings")
-      .then((response) => response.json())
-      .then((data) => {
-        setPairings(data.pairings);
-      })
-      .catch((error) => console.error("Error fetching pairings:", error));
-  }, []);
+  const fetchRecentGamesData = async (steamId) => {
+    try {
+      const games = await fetchRecentGames(steamId);
+      setRecentlyPlayed(games);
+      const genres = await fetchGameGenres(games);
+      setGenres(genres);
+    } catch (error) {
+      console.error("Failed to fetch data:", error.message);
+    }
+  };
 
   return (
     <div className="text-left text-black h-screen justify-center" style={{backgroundColor: "#fbf7f5"}}>
@@ -106,10 +97,7 @@ export default function Connect() {
                 {genres.map((genre, index) => (
                   <div key={index} className="bg-white p-4 rounded-lg">
                     <strong>{genre.name}</strong>
-                    <p>
-                      Last Played:{" "}
-                      {new Date(genre.lastPlayed * 1000).toLocaleString()}
-                    </p>
+                    <p>Last Played: {genre.lastPlayed} minutes</p>
                   </div>
                 ))}
               </div>
@@ -117,12 +105,18 @@ export default function Connect() {
 
             {/* Recently Played Section */}
             <section className="bg-slate-200 text-black p-6 flex flex-col items-center mt-4 rounded-lg border-2 border-black">
-              <h2 className="roboto-medium text-2xl mb-4">Recently Played</h2>
-              <div className="grid grid-cols-5 gap-4">
-                {recentlyPlayed.map((game, index) => (
-                  <div key={index} className="bg-white p-4 rounded-lg">
-                    {game}
-                  </div>
+                <h2 className="roboto-medium text-2xl mb-4">Recently Played</h2>
+                <div className="grid grid-cols-5 gap-4">
+                  {recentlyPlayed.map((game) => (
+                    <div key={game.appid} className="bg-white p-4 rounded-lg">
+                      <img
+                        src={`https://steamcdn-a.akamaihd.net/steam/apps/${game.appid}/capsule_184x69.jpg`}
+                        alt={game.name}
+                      />
+                      <p>{game.name}</p>
+                      <p>Playtime (2 weeks): {game.playtime_2weeks} minutes</p>
+                      <p>Playtime (total): {game.playtime_forever} minutes</p>
+                    </div>
                 ))}
               </div>
             </section>
