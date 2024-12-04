@@ -3,7 +3,8 @@
 #include <string>
 #include <algorithm>
 #include <utility>
-#include "crow_all.h"
+#include "httplib.h"
+#include "json.hpp"
 
 struct Genre {
     std::string name;
@@ -12,51 +13,50 @@ struct Genre {
     bool operator<(const Genre& other) const {
         return lastPlayed < other.lastPlayed;
     }
+
+    bool operator>(const Genre& other) const {
+        return lastPlayed > other.lastPlayed;
+    }
 };
 
 class MaxHeap {
-    std::vector<Game> heap;
+    std::vector<Genre> heap;
+
+    int parent(int index) const {
+        return (index - 1) / 2;
+    }
 
     void heapifyUp(int index) {
-        while(index > 0 && heap[index] > heap[parent(index)]) {
+        while (index > 0 && heap[index] > heap[parent(index)]) {
             std::swap(heap[index], heap[parent(index)]);
             index = parent(index);
         }
     }
 
-    void heapifyDown(int index) { // recursive heapifydown
+    void heapifyDown(int index) {
         int left = 2 * index + 1;
-        int right = 2* index + 2;
+        int right = 2 * index + 2;
         int largest = index;
 
-        if(left < heap.size() && heap[left] > heap[largest]) {
+        if (left < heap.size() && heap[left] > heap[largest]) {
             largest = left;
         }
-        if(right < heap.size() && heap[right] > heap[largest]) {
+        if (right < heap.size() && heap[right] > heap[largest]) {
             largest = right;
         }
-        if(largest != index) {
+        if (largest != index) {
             std::swap(heap[index], heap[largest]);
             heapifyDown(largest);
         }
     }
 
 public:
-    void insert(Genre genre) {
+    void insert(const Genre& genre) {
         heap.push_back(genre);
         heapifyUp(heap.size() - 1);
     }
 
-    Genre getMax() {
-        if(heap.empty()) return;
-        Genre max = heap[0];
-        heap[0] = heap.back();
-        heap.pop_back();
-        heapifyDown(0);
-        return max;
-    }
-
-    const std::vector<Genre>& getSortedGenres() {
+    std::vector<Genre> getSortedGenres() {
         std::vector<Genre> sorted = heap;
         std::sort(sorted.begin(), sorted.end(), std::greater<Genre>());
         return sorted;
@@ -65,32 +65,65 @@ public:
     bool empty() const { return heap.empty(); }
 };
 
+// Global data
+MaxHeap genreHeap;
+std::vector<std::string> recentlyPlayedGames = {"Game1", "Game2", "Game3"};
+std::vector<std::string> userPairings = {"User1", "User2", "User3"};
+
+// Implement the functions
+std::vector<Genre> getSortedGenres() {
+    return genreHeap.getSortedGenres();
+}
+
+std::vector<std::string> getRecentlyPlayed() {
+    return recentlyPlayedGames;
+}
+
+std::vector<std::string> getPairings() {
+    return userPairings;
+}
+
 int main() {
-    MaxHeap genreHeap;
-    
-    // Adding dummy data for testing
-    genreHeap.insert({"Action", 1698745000});
-    genreHeap.insert({"Adventure", 1698756000});
-    genreHeap.insert({"RPG", 1698767000});
+    // Insert some mock data into the MaxHeap
+    genreHeap.insert({"Action", 1625533220});
+    genreHeap.insert({"Adventure", 1625536820});
+    genreHeap.insert({"Puzzle", 1625529020});
 
-    crow::SimpleApp app;
+    httplib::Server server;
 
-    // Route to get sorted genres
-    CROW_ROUTE(app, "/genres/sorted")([&genreHeap]() {
-        auto sortedGenres = genreHeap.getSortedGenres();
-        crow::json::wvalue response;
+    // Endpoint to get sorted genres
+    server.Get("/api/genres", [](const httplib::Request&, httplib::Response& res) {
+    nlohmann::json response = {
+        {"genres", {
+            {{"name", "Adventure"}, {"lastPlayed", 1625536820}},
+            {{"name", "Action"}, {"lastPlayed", 1625533220}},
+            {{"name", "Puzzle"}, {"lastPlayed", 1625529020}}
+        }}
+    };
+    res.set_header("Access-Control-Allow-Origin", "*");
+    res.set_content(response.dump(), "application/json");
+});
 
-        for (const auto& genre : sortedGenres) {
-            response["genres"].push_back({
-                {"name", genre.name},
-                {"lastPlayed", genre.lastPlayed}
-            });
-        }
+server.Get("/api/recently-played", [](const httplib::Request&, httplib::Response& res) {
+    nlohmann::json response = {
+        {"recentlyPlayed", {"Game1", "Game2", "Game3"}}
+    };
+    res.set_header("Access-Control-Allow-Origin", "*");
+    res.set_content(response.dump(), "application/json");
+});
 
-        return response;
-    });
+server.Get("/api/pairings", [](const httplib::Request&, httplib::Response& res) {
+    nlohmann::json response = {
+        {"pairings", {"User1", "User2", "User3"}}
+    };
+    res.set_header("Access-Control-Allow-Origin", "*");
+    res.set_content(response.dump(), "application/json");
+});
 
-    app.port(8080).multithreaded().run();
+
+    // Start the server
+    std::cout << "Server running at http://localhost:8080" << std::endl;
+    server.listen("0.0.0.0", 8080);
 
     return 0;
 }
