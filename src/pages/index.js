@@ -17,7 +17,7 @@ export default function Home() {
   };
 
   const fetchRecentGames = async (steamId) => {
-    const apiKey = "924ECDC4CC643D261E87DA0732BD5A5B";
+    const apiKey = " ";
     try {
       const response = await axios.get(apiUrl);
       const games = response.data.response.games || [];
