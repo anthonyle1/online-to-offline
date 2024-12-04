@@ -151,3 +151,31 @@ body {
   border: 2px solid black; /* Border outline */
 }
 
+.windows-menu-bar {
+  border-left: black;
+  border-right: black;
+  border-width: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align dots to the right */
+  background-color: #0000003a; /* Dark aesthetic background */
+  height: 40px; /* Bar height */
+  padding: 0 15px; /* Spacing on the sides */
+  position: top;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it stays on top */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Styling for the dots */
+.dot {
+  width: 12px; /* Dot size */
+  height: 12px;
+  margin: 0 6px; /* Space between dots */
+  border-radius: 50%; /* Makes them circular */
+  background-color: black; /* Visible yellow for minimize */
+  transition: all 0.2s ease-in-out; /* Smooth hover effect */
+}
+

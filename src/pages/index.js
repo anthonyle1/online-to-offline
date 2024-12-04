@@ -15,7 +15,12 @@ export default function Home() {
   return (
     // home page: 
 
-    <div class="bg-white  text-center text-black h-screen justify-center">
+    <div class="bg-white text-center text-black min-h-screen">
+      <div className="windows-menu-bar border-black">
+        <div className="dot"></div>
+        <div className="dot"></div>
+        <div className="dot"></div>
+      </div>
       <a href="./">
         <img src="./logo-subtext.png" class="h-1/6 inline-block my-9"/>
       </a>

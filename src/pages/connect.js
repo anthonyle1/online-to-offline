@@ -44,6 +44,11 @@ export default function Connect() {
 
   return (
     <div className="bg-white text-left text-black h-screen justify-center">
+      <div className="windows-menu-bar border-black">
+        <div className="dot"></div>
+        <div className="dot"></div>
+        <div className="dot"></div>
+      </div>
       <div className="block">
         <div className="flex items-center justify-between">
           <a href="./">
