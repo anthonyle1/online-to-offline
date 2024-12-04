@@ -14,18 +14,27 @@ class UserInformation{
                 vector<string> genre;
                 float timeplayed;
 
-                Game(const string& name, unsigned int id, const vector<string>& gen, float time)
-                : gamename(name), gameid(id), genre(gen), timeplayed(time) {}
+                Game(string& name, unsigned int& id, vector<string>& gen, const float& time){
+                    gamename = name;
+                    gameid = id;
+                    genre = gen;
+                    timeplayed = time;
+                }
             };
             struct User{    
                 unsigned int userid;
                 vector<Game> userlibrary; // user's game library
                 unordered_map<unsigned int, float> timeplayedpergame; // map that tracks the time played per game
 
-                User() : userid(0) {}
+                User(){
+                    userid = 0;
+                }
 
-                User(unsigned int id,  vector<Game>& library,  unordered_map<unsigned int, float>& timeplayed)
-                : userid(id), userlibrary(library), timeplayedpergame(timeplayed) {}
+                User(unsigned int& id,  vector<Game>& library,  unordered_map<unsigned int, float>& timeplayed){
+                    userid = id;
+                    userlibrary = library;
+                    timeplayedpergame = timeplayed;
+                }
             };
         private:
         
@@ -43,20 +52,7 @@ class UserInformation{
             userbygame[game.gameid].push_back(user.userid);
         }
     }
-
-    // void recommendUsersByGame(unsigned int& gameid, unsigned int& userid){
-    //     if (userbygame.find(gameid) == userbygame.end()) {
-    //         return;
-    //     }
-        
-    //     for (auto& id : userbygame[gameid]) {
-    //         if (id != userid) { // exclude's the current user we're using to find pairs for
-    //             //test print
-    //            // cout << "user pairs with id: " << id << endl;
-    //         }
-    //     }
-    // }
-
+    
     void recommendUsersByGenre(string& genre, unsigned int& userid){
         unordered_set<unsigned int> userpairings;
         for(auto& [id, user] : users){
