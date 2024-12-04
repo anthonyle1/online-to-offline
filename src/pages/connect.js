@@ -42,7 +42,7 @@ export default function Connect() {
 
   return (
     <div
-      className="text-left text-black h-screen justify-center"
+      className="text-left text-black min-h-screen justify-center"
       style={{ backgroundColor: "#fbf7f5" }}
     >
       {/* Fixed Windows-style Menu Bar */}
@@ -94,12 +94,7 @@ export default function Connect() {
   </div>
 )}
 
-</div>
-
-
-
-
-          
+</div>   
         </div>
         <hr className="inline-block w-full border-black border-1 rounded-full m-0" />
       </div>
