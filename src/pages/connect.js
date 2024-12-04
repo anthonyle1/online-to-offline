@@ -18,7 +18,7 @@ export default function Connect() {
   // Fetch genres from the backend
   useEffect(() => {
     // Fetch genres
-    fetch("http://localhost:8080/api/genres")
+    fetch("./api/genres")
       .then((response) => response.json())
       .then((data) => {
         setGenres(data.genres);
@@ -26,7 +26,7 @@ export default function Connect() {
       .catch((error) => console.error("Error fetching genres:", error));
 
     // Fetch recently played games
-    fetch("http://localhost:8080/api/recently-played")
+    fetch("./api/recently-played")
       .then((response) => response.json())
       .then((data) => {
         setRecentlyPlayed(data.recentlyPlayed);
@@ -34,7 +34,7 @@ export default function Connect() {
       .catch((error) => console.error("Error fetching recently played:", error));
 
     // Fetch pairings
-    fetch("http://localhost:8080/api/pairings")
+    fetch("./api/pairings")
       .then((response) => response.json())
       .then((data) => {
         setPairings(data.pairings);
