@@ -43,7 +43,7 @@ export default function Connect() {
   }, []);
 
   return (
-    <div className="bg-white text-left text-black h-screen justify-center">
+    <div className="text-left text-black h-screen justify-center" style={{backgroundColor: "#fbf7f5"}}>
       {/* Fixed Windows-style Menu Bar */}
       <div className="windows-menu-bar border-black">
         <div className="dot"></div>
@@ -86,7 +86,7 @@ export default function Connect() {
       </div>
         <div className="flex flex-1">
           {/* Sidebar */}
-          <aside className="bg-slate-200 text-black w-1/4 p-6 flex flex-col items-center m-4 rounded-lg">
+          <aside className="bg-slate-200 text-black w-1/4 p-6 flex flex-col items-center m-4 rounded-lg border-2 border-black">
             <div>
               <h2 className="roboto-medium text-2xl">Pairings</h2>
               <ul>
@@ -100,7 +100,7 @@ export default function Connect() {
           {/* Main Section */}
           <main className="flex-1 p-6">
             {/* Genres Section */}
-            <section className="bg-slate-200 text-black p-6 flex flex-col items-center mt-2 rounded-lg">
+            <section className="bg-slate-200 text-black p-6 flex flex-col items-center mt-2 rounded-lg border-2 border-black">
               <h2 className="roboto-medium text-2xl mb-4">Favorite Genres</h2>
               <div className="inline-grid grid-cols-5 gap-4 justify-items-center">
                 {genres.map((genre, index) => (
@@ -116,7 +116,7 @@ export default function Connect() {
             </section>
 
             {/* Recently Played Section */}
-            <section className="bg-slate-200 text-black p-6 flex flex-col items-center mt-4 rounded-lg">
+            <section className="bg-slate-200 text-black p-6 flex flex-col items-center mt-4 rounded-lg border-2 border-black">
               <h2 className="roboto-medium text-2xl mb-4">Recently Played</h2>
               <div className="grid grid-cols-5 gap-4">
                 {recentlyPlayed.map((game, index) => (
