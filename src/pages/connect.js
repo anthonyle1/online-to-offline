@@ -11,7 +11,7 @@ export default function Connect() {
   const router = useRouter();
 
   const name = "Professor Puddles";
-  const image = "rubber-duck.jpg";
+  const image = "duck.jpg";
 
   useEffect(() => {
     setName(localStorage.getItem("username") || "Guest");
@@ -103,7 +103,7 @@ export default function Connect() {
     <div
       className="absolute top-0 left-0 w-full h-48 bg-cover bg-center"
       style={{
-        backgroundImage: `url('banner.jpg')`, // Replace with your banner image URL
+        backgroundImage: `url('pac-banner.jpg')`, // Replace with your banner image URL
         backgroundColor: "#e0e0e0", // Fallback solid color
       }}
     ></div>
