@@ -2,7 +2,7 @@
 #include <fstream>
 #include <ostream>
 #include <vector>
-#include <nlohmann/json.hpp>
+#include "json.hpp"
 #include <unordered_map>
 #include <chrono>
 using json = nlohmann::json;
