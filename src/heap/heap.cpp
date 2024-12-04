@@ -65,8 +65,55 @@ public:
     bool empty() const { return heap.empty(); }
 };
 
+class MinHeap {
+    std::vector<Genre> heap;
+
+    int parent(int index) const {
+        return (index - 1) / 2;
+    }
+
+    void heapifyUp(int index) {
+        while (index > 0 && heap[index] < heap[parent(index)]) {
+            std::swap(heap[index], heap[parent(index)]);
+            index = parent(index);
+        }
+    }
+
+    void heapifyDown(int index) {
+        int left = 2 * index + 1;
+        int right = 2 * index + 2;
+        int smallest = index;
+
+        if (left < heap.size() && heap[left] < heap[smallest]) {
+            smallest = left;
+        }
+        if (right < heap.size() && heap[right] < heap[smallest]) {
+            smallest = right;
+        }
+        if (smallest != index) {
+            std::swap(heap[index], heap[smallest]);
+            heapifyDown(smallest);
+        }
+    }
+
+public:
+    void insert(const Genre& genre) {
+        heap.push_back(genre);
+        heapifyUp(heap.size() - 1);
+    }
+
+    std::vector<Genre> getSortedGenres() {
+        std::vector<Genre> sorted = heap;
+        std::sort(sorted.begin(), sorted.end()); // Ascending order
+        return sorted;
+    }
+
+    bool empty() const { return heap.empty(); }
+};
+
 // Global data
-MaxHeap genreHeap;
+// MaxHeap genreHeap;
+MinHeap genreHeap;
 std::vector<std::string> recentlyPlayedGames = {"Game1", "Game2", "Game3"};
 std::vector<std::string> userPairings = {"User1", "User2", "User3"};
 
@@ -85,7 +132,7 @@ std::vector<std::string> getPairings() {
 
 int main() {
     // Insert some mock data into the MaxHeap
-    genreHeap.insert({"Action", 1625533220});
+    genreHeap.insert({"RPG", 1625533220});
     genreHeap.insert({"Adventure", 1625536820});
     genreHeap.insert({"Puzzle", 1625529020});
 
@@ -93,32 +140,36 @@ int main() {
 
     // Endpoint to get sorted genres
     server.Get("/api/genres", [](const httplib::Request&, httplib::Response& res) {
-    nlohmann::json response = {
-        {"genres", {
-            {{"name", "Adventure"}, {"lastPlayed", 1625536820}},
-            {{"name", "Action"}, {"lastPlayed", 1625533220}},
-            {{"name", "Puzzle"}, {"lastPlayed", 1625529020}}
-        }}
-    };
-    res.set_header("Access-Control-Allow-Origin", "*");
-    res.set_content(response.dump(), "application/json");
+        auto sortedGenres = getSortedGenres(); // Get the sorted genres from the MinHeap
+        nlohmann::json genresJson = nlohmann::json::array();
+
+        // Convert the sorted genres to JSON
+        for (const auto& genre : sortedGenres) {
+            genresJson.push_back({{"name", genre.name}, {"lastPlayed", genre.lastPlayed}});
+        }
+
+        // Create and send the response
+        nlohmann::json response = {{"genres", genresJson}};
+        res.set_header("Access-Control-Allow-Origin", "*");
+        res.set_content(response.dump(), "application/json");
 });
 
 server.Get("/api/recently-played", [](const httplib::Request&, httplib::Response& res) {
-    nlohmann::json response = {
-        {"recentlyPlayed", {"Game1", "Game2", "Game3"}}
-    };
-    res.set_header("Access-Control-Allow-Origin", "*");
-    res.set_content(response.dump(), "application/json");
-});
+        nlohmann::json response = {
+            {"recentlyPlayed", recentlyPlayedGames}
+        };
+        res.set_header("Access-Control-Allow-Origin", "*");
+        res.set_content(response.dump(), "application/json");
+    });
+
 
 server.Get("/api/pairings", [](const httplib::Request&, httplib::Response& res) {
-    nlohmann::json response = {
-        {"pairings", {"User1", "User2", "User3"}}
-    };
-    res.set_header("Access-Control-Allow-Origin", "*");
-    res.set_content(response.dump(), "application/json");
-});
+        nlohmann::json response = {
+            {"pairings", userPairings}
+        };
+        res.set_header("Access-Control-Allow-Origin", "*");
+        res.set_content(response.dump(), "application/json");
+    });
 
 
     // Start the server
