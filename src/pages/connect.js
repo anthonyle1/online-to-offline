@@ -4,9 +4,16 @@ export default function Connect() {
   const [genres, setGenres] = useState([]); // Store favorite genres
   const [recentlyPlayed, setRecentlyPlayed] = useState([]); // Store recently played games
   const [pairings, setPairings] = useState([]); // Store recommended pairings
+  const [username, setName] = useState(""); // Steam username
+  const [steamId, setSteamId] = useState(""); // Steam ID
 
-  const name = "Anthony";
-  const image = "Screenshot 2024-11-27 005249.png";
+  const name = "Professor Puddles";
+  const image = "rubber-duck.jpg";
+
+  useEffect(() => {
+    setName(localStorage.getItem("username") || "Guest");
+    setSteamId(localStorage.getItem("steamId") || "");
+  }, []);
 
   // Fetch genres from the backend
   useEffect(() => {
@@ -57,7 +64,7 @@ export default function Connect() {
       <div className="mx-8">
         <img src={image} className="mt-10 w-36 h-36 border-black border-2 rounded-full" />
         <p className="roboto-medium text-3xl">{name}</p>
-        <p className="xanh-mono-regular text-sm">@blubtatu</p>
+        <p className="xanh-mono-regular text-sm">@quacksandqueues</p>
       </div>
 
       <div>
