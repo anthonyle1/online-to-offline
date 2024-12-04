@@ -29,7 +29,7 @@ export default function Home() {
     router.push("/connect"); // Navigate to the connect page
   };
 
-  const handleSteamIdChange = (e) => {
+    const handleSteamIdChange = (e) => {
     const value = e.target.value;
 
     // Allow only numeric input and restrict to 17 characters
@@ -45,9 +45,6 @@ export default function Home() {
     }
   };
 
-    fetchRecentGames(steamId);
-  };
-
   const fetchRecentGames = async (steamId) => {
     const apiKey = " ";
     try {
@@ -58,7 +55,6 @@ export default function Home() {
       console.error("Failed to fetch recent games:", error);
     }
   };
-
 
   return (
     <div className="text-center text-black min-h-screen" style={{backgroundColor: "#fbf7f5"}}>
