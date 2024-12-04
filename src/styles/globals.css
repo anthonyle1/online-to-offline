@@ -123,3 +123,31 @@ body {
 .custom-shadow{
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* Button with colored shadow */
+.button-shadow {
+  box-shadow: 4px 4px 10px rgba(223, 192, 192, 0.0.9), -4px -4px 10px rgba(255, 255, 255, 0.7);
+  border: 2px solid black; /* Border outline */
+  border-radius: 12px; /* Rounded corners */
+  background-color: #f8f8f8; /* Light background */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-shadow:hover {
+  box-shadow: 6px 6px 12px rgba(223, 192, 192, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* Container with colored shadow */
+.container-shadow {
+  width: 80%; /* Adjust to match your desired size */
+  max-width: 600px; /* Set a max width */
+  height: 200px; /* Fixed height for the container */
+  margin-bottom: 3%;
+  box-shadow: 6px 6px 16px rgba(223, 192, 192, 0.9), -6px -6px 16px rgba(255, 255, 255, 0.7);
+  border-radius: 16px; /* Rounded corners */
+  background-color: #e0e0e0; /* Light gray background for containers */
+  padding: 20px; /* Padding inside the container */
+  border: 2px solid black; /* Border outline */
+}
+
