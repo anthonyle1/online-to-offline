@@ -179,3 +179,9 @@ body {
   transition: all 0.2s ease-in-out; /* Smooth hover effect */
 }
 
+.content {
+  margin-left: 2%; /* Add margin on top, bottom, and center horizontally */
+  margin-right: 2%;
+  padding: 40px; /* Add padding inside the container */
+  padding-top: 20px;
+}
