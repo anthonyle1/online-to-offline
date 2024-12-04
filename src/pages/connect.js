@@ -44,11 +44,22 @@ export default function Connect() {
 
   return (
     <div className="bg-white text-left text-black h-screen justify-center">
+      {/* Fixed Windows-style Menu Bar */}
+      <div className="windows-menu-bar border-black">
+        <div className="dot"></div>
+        <div className="dot"></div>
+        <div className="dot"></div>
+      </div>
+
       {/* Header Section */}
       <div className="block">
         <div className="flex items-center justify-between">
           <a href="./">
-            <img src="logo.svg" className="inline-block w-2/3 pt-5 text-left pl-6" alt="Logo" />
+            <img
+              src="logo.svg"
+              className="inline-block w-2/3 pt-5 text-left pl-6"
+              alt="Logo"
+            />
           </a>
           <div className="flex justify-end w-10/12 mr-6">
             <p className="xanh-mono-regular-bold text-right align-middle pt-4">
@@ -58,55 +69,65 @@ export default function Connect() {
         </div>
         <hr className="inline-block w-full border-black border-1 rounded-full m-0 p-0" />
       </div>
-  
-      {/* Profile Section */}
+
+      
+
+      {/* Main Content Section */}
+      <div className="content">
+        {/* Profile Section */}
       <div className="mx-8">
-        <img src={image} className="mt-10 w-36 h-36 border-black border-2 rounded-full" alt="Profile" />
+        <img
+          src={image}
+          className="mt-10 w-36 h-36 border-black border-2 rounded-full"
+          alt="Profile"
+        />
         <p className="roboto-medium text-3xl">{name}</p>
         <p className="xanh-mono-regular text-sm">@quacksandqueues</p>
       </div>
-  
-      {/* Main Content Section */}
-      <div className="flex flex-1">
-        {/* Sidebar */}
-        <aside className="bg-slate-200 text-black w-1/4 p-6 flex flex-col items-center m-4 rounded-lg">
-          <div>
-            <h2 className="roboto-medium text-2xl">Pairings</h2>
-            <ul>
-              {pairings.map((pair, index) => (
-                <li key={index}>{pair}</li>
-              ))}
-            </ul>
-          </div>
-        </aside>
-  
-        {/* Main Section */}
-        <main className="flex-1 p-6">
-          {/* Genres Section */}
-          <section className="bg-slate-200 text-black p-6 flex flex-col items-center mt-2 rounded-lg">
-            <h2 className="roboto-medium text-2xl mb-4">Favorite Genres</h2>
-            <div className="grid grid-cols-5 gap-4">
-              {genres.map((genre, index) => (
-                <div key={index} className="bg-white p-4 rounded-lg">
-                  <strong>{genre.name}</strong>
-                  <p>Last Played: {new Date(genre.lastPlayed * 1000).toLocaleString()}</p>
-                </div>
-              ))}
+        <div className="flex flex-1">
+          {/* Sidebar */}
+          <aside className="bg-slate-200 text-black w-1/4 p-6 flex flex-col items-center m-4 rounded-lg">
+            <div>
+              <h2 className="roboto-medium text-2xl">Pairings</h2>
+              <ul>
+                {pairings.map((pair, index) => (
+                  <li key={index}>{pair}</li>
+                ))}
+              </ul>
             </div>
-          </section>
-  
-          {/* Recently Played Section */}
-          <section className="bg-slate-200 text-black p-6 flex flex-col items-center mt-4 rounded-lg">
-            <h2 className="roboto-medium text-2xl mb-4">Recently Played</h2>
-            <div className="grid grid-cols-5 gap-4">
-              {recentlyPlayed.map((game, index) => (
-                <div key={index} className="bg-white p-4 rounded-lg">
-                  {game}
-                </div>
-              ))}
-            </div>
-          </section>
-        </main>
+          </aside>
+
+          {/* Main Section */}
+          <main className="flex-1 p-6">
+            {/* Genres Section */}
+            <section className="bg-slate-200 text-black p-6 flex flex-col items-center mt-2 rounded-lg">
+              <h2 className="roboto-medium text-2xl mb-4">Favorite Genres</h2>
+              <div className="inline-grid grid-cols-5 gap-4 justify-items-center">
+                {genres.map((genre, index) => (
+                  <div key={index} className="bg-white p-4 rounded-lg">
+                    <strong>{genre.name}</strong>
+                    <p>
+                      Last Played:{" "}
+                      {new Date(genre.lastPlayed * 1000).toLocaleString()}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Recently Played Section */}
+            <section className="bg-slate-200 text-black p-6 flex flex-col items-center mt-4 rounded-lg">
+              <h2 className="roboto-medium text-2xl mb-4">Recently Played</h2>
+              <div className="grid grid-cols-5 gap-4">
+                {recentlyPlayed.map((game, index) => (
+                  <div key={index} className="bg-white p-4 rounded-lg">
+                    {game}
+                  </div>
+                ))}
+              </div>
+            </section>
+          </main>
+        </div>
       </div>
     </div>
   );
