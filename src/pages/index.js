@@ -43,7 +43,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-white text-center text-black min-h-screen">
+    <div className="text-center text-black min-h-screen" style={{backgroundColor: "#fbf7f5"}}>
       {/* Windows-style Menu Bar */}
       <div className="windows-menu-bar border-black">
         <div className="dot"></div>
