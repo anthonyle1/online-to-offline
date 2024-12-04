@@ -11,7 +11,7 @@ export default function Connect() {
   const router = useRouter();
 
   const name = "Professor Puddles";
-  const image = "rubber-duck.jpg";
+  const image = "duck.jpg";
 
   useEffect(() => {
     setName(localStorage.getItem("username") || "Guest");
