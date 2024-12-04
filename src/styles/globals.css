@@ -185,3 +185,17 @@ body {
   padding: 40px; /* Add padding inside the container */
   padding-top: 20px;
 }
+
+.warning-box {
+  position: absolute;
+  top: 100%; /* Below the input field */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.5rem;
+  background-color: #ffe4e6; /* Light red background */
+  color: #b91c1c; /* Red text */
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-size: 0.875rem; /* Small text size */
+}
