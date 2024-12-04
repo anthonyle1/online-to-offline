@@ -62,7 +62,7 @@ export default function Connect() {
 
       <div>
         <p class="header">
-z          favorite genres
+          favorite genres
         </p>
         <p class="header">
           recently played
