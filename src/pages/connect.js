@@ -1,11 +1,40 @@
-import Image from "next/image";
-import localFont from "next/font/local";
-import React from 'react';
+import React, { useState, useEffect } from "react";
 
-let name = "Anthony";
-let image = "Screenshot 2024-11-27 005249.png"
+export default function Connect() {
+  const [genres, setGenres] = useState([]); // Store favorite genres
+  const [recentlyPlayed, setRecentlyPlayed] = useState([]); // Store recently played games
+  const [pairings, setPairings] = useState([]); // Store recommended pairings
 
-export default function connect() {
+  const name = "Anthony";
+  const image = "Screenshot 2024-11-27 005249.png";
+
+  // Fetch genres from the backend
+  useEffect(() => {
+    // Fetch genres
+    fetch("http://localhost:8080/api/genres")
+      .then((response) => response.json())
+      .then((data) => {
+        setGenres(data.genres);
+      })
+      .catch((error) => console.error("Error fetching genres:", error));
+
+    // Fetch recently played games
+    fetch("http://localhost:8080/api/recently-played")
+      .then((response) => response.json())
+      .then((data) => {
+        setRecentlyPlayed(data.recentlyPlayed);
+      })
+      .catch((error) => console.error("Error fetching recently played:", error));
+
+    // Fetch pairings
+    fetch("http://localhost:8080/api/pairings")
+      .then((response) => response.json())
+      .then((data) => {
+        setPairings(data.pairings);
+      })
+      .catch((error) => console.error("Error fetching pairings:", error));
+  }, []);
+
   return (
 
     <div class="bg-white  text-left text-black h-screen justify-center">
@@ -18,47 +47,34 @@ export default function connect() {
         <p class="xanh-mono-regular-bold text-right align-middle pt-4">
           hello, {name}!</p>
       </div>
+
       <div>
       </div>
-    </div>
+      </div>
 
       <hr class="inline-block w-full border-black border-1 rounded-full m-0 p-0"></hr> 
       </div>
-      <div class="mx-8">
-        <img src={image} class="mt-10 w-36 h-36 border-black border-2 rounded-full"/>
-        <p class="roboto-medium text-3xl">{name}</p>
-        <p class="xanh-mono-regular text-sm">@blubtatu</p>
+      <div className="mx-8">
+        <img src={image} className="mt-10 w-36 h-36 border-black border-2 rounded-full" />
+        <p className="roboto-medium text-3xl">{name}</p>
+        <p className="xanh-mono-regular text-sm">@blubtatu</p>
       </div>
 
-      <div class="flex flex-1">
-        <aside class="bg-slate-200 text-black w-1/4 p-6 flex flex-col items-center m-4 rounded-lg">
-        <div>
-          <h2 className="roboto-medium text-2xl">Pairings</h2>
-        </div>  
-        </aside>
-
-      <main class="flex-1 p-6">
-        <section class="bg-slate-200 text-black w-7/8 p-6 flex flex-col items-center mt-2 rounded-lg">
-          <h2 class="roboto-medium text-2xl mb-4">Recent Genres</h2>
-          <div class="grid grid-cols-5 gap-4">
-            <div class="bg-white p-4 rounded-lg">Genre 1</div>
-            <div class="bg-white p-4 rounded-lg">Genre 2</div>
-            <div class="bg-white p-4 rounded-lg">Genre 3</div>
-            <div class="bg-white p-4 rounded-lg">Genre 4</div>
-            <div class="bg-white p-4 rounded-lg">Genre 5</div>
-          </div>
-        </section>
-
-        <section class="bg-slate-200 text-black w-7/8 p-6 flex flex-col items-center mt-4 rounded-lg">
-          <h2 class="roboto-medium text-2xl mb-4">Recent Games Played</h2>
-          <div class="grid grid-cols-5 gap-4">
-          </div>
-        </section>
-      </main>
+      <div>
+        <p class="header">
+          favorite genres
+        </p>
+        <p class="header">
+          recently played
+        </p>
+        <p class="header">
+          pairings
+        </p>
       </div>
+
     
     </div>
 
-  );
-};
 
+  );
+}
