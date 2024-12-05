@@ -1,7 +1,7 @@
 const axios = require("axios");
 const fs = require("fs");
 
-const API_KEY = "924ECDC4CC643D261E87DA0732BD5A5B";
+const API_KEY = "";
 const BASE_URL = "https://api.steampowered.com";
 const STORE_BASE_URL = "https://store.steampowered.com/api/appdetails";
 
