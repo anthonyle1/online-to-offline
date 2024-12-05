@@ -63,7 +63,3 @@ const fetchRecentGames = async (steamId) => {
     throw error;
   }
 };
-
-// Call the function
-const steamId = "76561198337546611"; // Replace with your Steam ID
-fetchRecentGames(steamId);
