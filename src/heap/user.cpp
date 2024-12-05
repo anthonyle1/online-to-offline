@@ -7,18 +7,37 @@
 using namespace std;
 
 class UserInformation{
-    private:
+    public:
         struct Game{
-            string gamename;
-            unsigned int gameid;
-            vector<string> genre;
-            float timeplayed;
-        };
-        struct User{
-            unsigned int userid;
-            vector<Game> userlibrary; // user's game library
-            unordered_map<string, float> timeplayedpergame; // map that tracks the time played per game
-        };
+                string gamename;
+                unsigned int gameid;
+                vector<string> genre;
+                float timeplayed;
+
+                Game(string& name, unsigned int& id, vector<string>& gen, const float& time){
+                    gamename = name;
+                    gameid = id;
+                    genre = gen;
+                    timeplayed = time;
+                }
+            };
+            struct User{    
+                unsigned int userid;
+                vector<Game> userlibrary; // user's game library
+                unordered_map<unsigned int, float> timeplayedpergame; // map that tracks the time played per game
+
+                User(){
+                    userid = 0;
+                }
+
+                User(unsigned int& id,  vector<Game>& library,  unordered_map<unsigned int, float>& timeplayed){
+                    userid = id;
+                    userlibrary = library;
+                    timeplayedpergame = timeplayed;
+                }
+            };
+        private:
+        
         unordered_map<unsigned int, vector<unsigned int>> userbygame; // maps game id to vector of user ids
         unordered_map<unsigned int, User> users;
     public:
@@ -29,28 +48,26 @@ class UserInformation{
         }
         users[user.userid] = user;
 
-        for (const auto& game : user.userlibrary) {
+        for (auto& game : user.userlibrary) {
             userbygame[game.gameid].push_back(user.userid);
         }
     }
-
-    void reccommendUsersbyGame(unsigned int& gameid, unsigned int& userid){
-        if (userbygame.find(gameid) == userbygame.end()) {
-            return;
-        }
-        
-        for (const auto& id : userbygame[gameid]) {
-            if (id != userid) { // exclude's the current user we're using to find pairs for
-                //test print
-                cout << "user pairs with id: " << id << endl;
+    
+    void recommendUsersByGenre(string& genre, unsigned int& userid){
+        unordered_set<unsigned int> userpairings;
+        for(auto& [id, user] : users){
+            if(id == userid) continue;
+            for(auto& game: user.userlibrary){
+                if(find(game.genre.begin(), game.genre.end(), genre) != game.genre.end()){
+                    userpairings.insert(id);
+                    break;
+                }
             }
         }
-    }
-
-    void reccommendUsersbyGenre(){
-        unordered_set<unsigned int> userpairings;
         
+        if(userpairings.empty()){
+            return;
+        }
 
     }
-
 };
