@@ -1,0 +1,1373 @@
+[
+  {
+    "appid": 4000,
+    "name": "Garry's Mod",
+    "time_played": 4510,
+    "genres": [
+      "Casual",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  {
+    "appid": 550,
+    "name": "Left 4 Dead 2",
+    "time_played": 2166,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "appid": 105600,
+    "name": "Terraria",
+    "time_played": 20650,
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Indie",
+      "Rol"
+    ]
+  },
+  {
+    "appid": 107600,
+    "name": "Waves",
+    "time_played": 25,
+    "genres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  {
+    "appid": 49520,
+    "name": "Borderlands 2",
+    "time_played": 2557,
+    "genres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  {
+    "appid": 99900,
+    "name": "Spiral Knights",
+    "time_played": 39,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Free To Play",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG"
+    ]
+  },
+  {
+    "appid": 109600,
+    "name": "Neverwinter",
+    "time_played": 466,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 200210,
+    "name": "Realm of the Mad God Exalt",
+    "time_played": 8,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 230410,
+    "name": "Warframe",
+    "time_played": 26692,
+    "genres": [
+      "Action",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 236390,
+    "name": "War Thunder",
+    "time_played": 0,
+    "genres": [
+      "Action",
+      "Massively Multiplayer",
+      "Simulation",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 238960,
+    "name": "Path of Exile",
+    "time_played": 842,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 223710,
+    "name": "Cry of Fear",
+    "time_played": 510,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ]
+  },
+  {
+    "appid": 237310,
+    "name": "Elsword",
+    "time_played": 66,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 265630,
+    "name": "Fistful of Frags",
+    "time_played": 58,
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Indie"
+    ]
+  },
+  {
+    "appid": 216150,
+    "name": "MapleStory",
+    "time_played": 274,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 224260,
+    "name": "No More Room in Hell",
+    "time_played": 30,
+    "genres": [
+      "Action",
+      "Indie",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 8870,
+    "name": "BioShock Infinite",
+    "time_played": 304,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "appid": 218620,
+    "name": "PAYDAY 2",
+    "time_played": 339,
+    "genres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  {
+    "appid": 206420,
+    "name": "Saints Row IV",
+    "time_played": 523,
+    "genres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  {
+    "appid": 208610,
+    "name": "Skullgirls ∞Endless Beta∞",
+    "time_played": 0,
+    "genres": []
+  },
+  {
+    "appid": 245170,
+    "name": "Skullgirls 2nd Encore",
+    "time_played": 1362,
+    "genres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  {
+    "appid": 261180,
+    "name": "Lethal League",
+    "time_played": 184,
+    "genres": [
+      "Action",
+      "Indie",
+      "Sports"
+    ]
+  },
+  {
+    "appid": 262060,
+    "name": "Darkest Dungeon®",
+    "time_played": 106,
+    "genres": [
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  {
+    "appid": 211820,
+    "name": "Starbound",
+    "time_played": 2528,
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Casual",
+      "Indie",
+      "Rol"
+    ]
+  },
+  {
+    "appid": 367540,
+    "name": "Starbound - Unstable",
+    "time_played": 0,
+    "genres": []
+  },
+  {
+    "appid": 291410,
+    "name": "Duelyst",
+    "time_played": 103,
+    "genres": [
+      "Free To Play",
+      "Indie",
+      "Strategy"
+    ]
+  },
+  {
+    "appid": 292120,
+    "name": "FINAL FANTASY XIII",
+    "time_played": 0,
+    "genres": [
+      "RPG"
+    ]
+  },
+  {
+    "appid": 304050,
+    "name": "Trove",
+    "time_played": 1425,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 291480,
+    "name": "Warface: Clutch",
+    "time_played": 38,
+    "genres": [
+      "Action",
+      "Massively Multiplayer",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 215080,
+    "name": "WAKFU",
+    "time_played": 41,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Strategy",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 312990,
+    "name": "The Expendabros",
+    "time_played": 103,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 323370,
+    "name": "TERA",
+    "time_played": 183,
+    "genres": []
+  },
+  {
+    "appid": 327690,
+    "name": "Gigantic",
+    "time_played": 26,
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Strategy"
+    ]
+  },
+  {
+    "appid": 730,
+    "name": "Counter-Strike 2",
+    "time_played": 3299,
+    "genres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 333930,
+    "name": "Dirty Bomb",
+    "time_played": 14,
+    "genres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 250900,
+    "name": "The Binding of Isaac: Rebirth",
+    "time_played": 601,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "appid": 355180,
+    "name": "Codename CURE",
+    "time_played": 11,
+    "genres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 322330,
+    "name": "Don't Starve Together",
+    "time_played": 1061,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ]
+  },
+  {
+    "appid": 292030,
+    "name": "The Witcher 3: Wild Hunt",
+    "time_played": 718,
+    "genres": [
+      "RPG"
+    ]
+  },
+  {
+    "appid": 383980,
+    "name": "Rivals of Aether",
+    "time_played": 1692,
+    "genres": [
+      "Indie"
+    ]
+  },
+  {
+    "appid": 386360,
+    "name": "SMITE",
+    "time_played": 442,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Massively Multiplayer",
+      "RPG",
+      "Strategy",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 858460,
+    "name": "SMITE - Public Test",
+    "time_played": 0,
+    "genres": []
+  },
+  {
+    "appid": 291550,
+    "name": "Brawlhalla",
+    "time_played": 202,
+    "genres": [
+      "Action",
+      "Indie",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 391540,
+    "name": "Undertale",
+    "time_played": 1137,
+    "genres": [
+      "Indie",
+      "RPG"
+    ]
+  },
+  {
+    "appid": 236110,
+    "name": "Dungeon Defenders II",
+    "time_played": 53,
+    "genres": [
+      "Action",
+      "Indie",
+      "RPG",
+      "Strategy",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 413150,
+    "name": "Stardew Valley",
+    "time_played": 4821,
+    "genres": [
+      "Indie",
+      "RPG",
+      "Simulation"
+    ]
+  },
+  {
+    "appid": 280790,
+    "name": "Creativerse",
+    "time_played": 24,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Simulation"
+    ]
+  },
+  {
+    "appid": 349040,
+    "name": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4",
+    "time_played": 403,
+    "genres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  {
+    "appid": 431960,
+    "name": "Wallpaper Engine",
+    "time_played": 5624,
+    "genres": [
+      "Casual",
+      "Indie",
+      "Animación y modelado",
+      "Diseño e ilustración",
+      "Edición fotográfica",
+      "Utilidades"
+    ]
+  },
+  {
+    "appid": 424280,
+    "name": "Iron Snout",
+    "time_played": 93,
+    "genres": [
+      "Action",
+      "Indie",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 438100,
+    "name": "VRChat",
+    "time_played": 0,
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Massively Multiplayer",
+      "Simulation",
+      "Sports",
+      "Free To Play",
+      "Early Access"
+    ]
+  },
+  {
+    "appid": 439350,
+    "name": "Kritika:REBOOT",
+    "time_played": 127,
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Massively Multiplayer",
+      "RPG"
+    ]
+  },
+  {
+    "appid": 444090,
+    "name": "Paladins",
+    "time_played": 1904,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "Strategy",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 596350,
+    "name": "Paladins - Public Test",
+    "time_played": 0,
+    "genres": []
+  },
+  {
+    "appid": 457140,
+    "name": "Oxygen Not Included",
+    "time_played": 45,
+    "genres": [
+      "Indie",
+      "Simulation"
+    ]
+  },
+  {
+    "appid": 460950,
+    "name": "Katana ZERO",
+    "time_played": 1496,
+    "genres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  {
+    "appid": 377160,
+    "name": "Fallout 4",
+    "time_played": 1983,
+    "genres": [
+      "RPG"
+    ]
+  },
+  {
+    "appid": 485610,
+    "name": "Soccer Online: Ball 3D",
+    "time_played": 20,
+    "genres": [
+      "Sports"
+    ]
+  },
+  {
+    "appid": 489830,
+    "name": "The Elder Scrolls V: Skyrim Special Edition",
+    "time_played": 3277,
+    "genres": [
+      "RPG"
+    ]
+  },
+  {
+    "appid": 402570,
+    "name": "Atlas Reactor",
+    "time_played": 457,
+    "genres": [
+      "Free To Play",
+      "Strategy"
+    ]
+  },
+  {
+    "appid": 513560,
+    "name": "Hunger Dungeon",
+    "time_played": 8,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Free To Play",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  {
+    "appid": 548430,
+    "name": "Deep Rock Galactic",
+    "time_played": 3613,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "appid": 550650,
+    "name": "Black Squad",
+    "time_played": 47,
+    "genres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 553850,
+    "name": "HELLDIVERS™ 2",
+    "time_played": 2302,
+    "genres": [
+      "Acción"
+    ]
+  },
+  {
+    "appid": 252950,
+    "name": "Rocket League",
+    "time_played": 4668,
+    "genres": [
+      "Action",
+      "Indie",
+      "Racing",
+      "Sports"
+    ]
+  },
+  {
+    "appid": 560380,
+    "name": "MapleStory 2",
+    "time_played": 277,
+    "genres": []
+  },
+  {
+    "appid": 578310,
+    "name": "BRAIN / OUT",
+    "time_played": 116,
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Indie",
+      "Massively Multiplayer"
+    ]
+  },
+  {
+    "appid": 588430,
+    "name": "Fallout Shelter",
+    "time_played": 20,
+    "genres": [
+      "RPG",
+      "Simulation",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 460930,
+    "name": "Tom Clancy's Ghost Recon® Wildlands",
+    "time_played": 131,
+    "genres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  {
+    "appid": 606140,
+    "name": "Survived By",
+    "time_played": 25,
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Early Access"
+    ]
+  },
+  {
+    "appid": 627690,
+    "name": "Idle Champions of the Forgotten Realms",
+    "time_played": 116,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Strategy",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 630100,
+    "name": "SoulWorker",
+    "time_played": 331,
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Massively Multiplayer",
+      "RPG"
+    ]
+  },
+  {
+    "appid": 632360,
+    "name": "Risk of Rain 2",
+    "time_played": 4479,
+    "genres": [
+      "Acción",
+      "Indie"
+    ]
+  },
+  {
+    "appid": 644540,
+    "name": "Dies irae ~Amantes amentes~",
+    "time_played": 1,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  {
+    "appid": 204300,
+    "name": "Awesomenauts",
+    "time_played": 69,
+    "genres": [
+      "Action",
+      "Indie",
+      "Strategy",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 304930,
+    "name": "Unturned",
+    "time_played": 204,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 677620,
+    "name": "Splitgate",
+    "time_played": 112,
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Indie"
+    ]
+  },
+  {
+    "appid": 678800,
+    "name": "SAS: Zombie Assault 4",
+    "time_played": 23,
+    "genres": [
+      "Action",
+      "Free To Play",
+      "RPG"
+    ]
+  },
+  {
+    "appid": 698780,
+    "name": "Doki Doki Literature Club",
+    "time_played": 223,
+    "genres": [
+      "Casual",
+      "Free To Play",
+      "Indie"
+    ]
+  },
+  {
+    "appid": 700330,
+    "name": "SCP: Secret Laboratory",
+    "time_played": 6,
+    "genres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 711810,
+    "name": "Never Split the Party",
+    "time_played": 71,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Free To Play",
+      "Indie",
+      "RPG",
+      "Simulation"
+    ]
+  },
+  {
+    "appid": 723780,
+    "name": "Modern Combat Versus",
+    "time_played": 31,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 725480,
+    "name": "Slap City",
+    "time_played": 127,
+    "genres": [
+      "Action",
+      "Indie"
+    ]
+  },
+  {
+    "appid": 738060,
+    "name": "Freddy Fazbear's Pizzeria Simulator",
+    "time_played": 23,
+    "genres": [
+      "Free To Play",
+      "Indie",
+      "Simulation"
+    ]
+  },
+  {
+    "appid": 739630,
+    "name": "Phasmophobia",
+    "time_played": 5607,
+    "genres": [
+      "Action",
+      "Indie",
+      "Early Access"
+    ]
+  },
+  {
+    "appid": 215830,
+    "name": "Closers",
+    "time_played": 221,
+    "genres": [
+      "Action",
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 427460,
+    "name": "Battlerite Public Test",
+    "time_played": 0,
+    "genres": []
+  },
+  {
+    "appid": 504370,
+    "name": "Battlerite",
+    "time_played": 168,
+    "genres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 755790,
+    "name": "Ring of Elysium",
+    "time_played": 56,
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Massively Multiplayer"
+    ]
+  },
+  {
+    "appid": 767560,
+    "name": "War Robots",
+    "time_played": 7,
+    "genres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 774171,
+    "name": "Muse Dash",
+    "time_played": 398,
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie"
+    ]
+  },
+  {
+    "appid": 809960,
+    "name": "Radical Heights",
+    "time_played": 42,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Free To Play",
+      "Indie",
+      "Massively Multiplayer",
+      "Early Access"
+    ]
+  },
+  {
+    "appid": 813820,
+    "name": "Realm Royale Reforged",
+    "time_played": 39,
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Early Access"
+    ]
+  },
+  {
+    "appid": 878760,
+    "name": "Realm Royale - Test Server",
+    "time_played": 0,
+    "genres": []
+  },
+  {
+    "appid": 433850,
+    "name": "Z1 Battle Royale",
+    "time_played": 10,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Free To Play",
+      "Massively Multiplayer"
+    ]
+  },
+  {
+    "appid": 439700,
+    "name": "H1Z1: Test Server",
+    "time_played": 0,
+    "genres": [
+      "Massively Multiplayer"
+    ]
+  },
+  {
+    "appid": 553660,
+    "name": "PWND",
+    "time_played": 16,
+    "genres": [
+      "Action",
+      "Casual",
+      "Free To Play",
+      "Indie"
+    ]
+  },
+  {
+    "appid": 544920,
+    "name": "Darwin Project",
+    "time_played": 12,
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Indie"
+    ]
+  },
+  {
+    "appid": 823130,
+    "name": "Totally Accurate Battlegrounds",
+    "time_played": 79,
+    "genres": [
+      "Action",
+      "Indie",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 881100,
+    "name": "Noita",
+    "time_played": 260,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Simulation"
+    ]
+  },
+  {
+    "appid": 884660,
+    "name": "CRSED: Cuisine Royale",
+    "time_played": 39,
+    "genres": [
+      "Action",
+      "Massively Multiplayer",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 582010,
+    "name": "Monster Hunter: World",
+    "time_played": 1833,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "appid": 714010,
+    "name": "Aimlabs",
+    "time_played": 104,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "Simulation",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 895670,
+    "name": "Armajet",
+    "time_played": 0,
+    "genres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 921060,
+    "name": "Modern Combat 5",
+    "time_played": 122,
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Massively Multiplayer"
+    ]
+  },
+  {
+    "appid": 412020,
+    "name": "Metro Exodus",
+    "time_played": 303,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "appid": 1449560,
+    "name": "Metro Exodus Enhanced Edition",
+    "time_played": 1,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "appid": 945360,
+    "name": "Among Us",
+    "time_played": 2426,
+    "genres": [
+      "Casual"
+    ]
+  },
+  {
+    "appid": 1019100,
+    "name": "Attack on Titan 2 - A.O.T.2 - Demo",
+    "time_played": 40,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "appid": 524220,
+    "name": "NieR:Automata™",
+    "time_played": 346,
+    "genres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  {
+    "appid": 1025580,
+    "name": "Vainglory",
+    "time_played": 803,
+    "genres": [
+      "Free To Play",
+      "Strategy",
+      "Early Access"
+    ]
+  },
+  {
+    "appid": 1056640,
+    "name": "Phantasy Star Online 2 New Genesis",
+    "time_played": 0,
+    "genres": [
+      "Action",
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 1061910,
+    "name": "Metal: Hellsinger",
+    "time_played": 274,
+    "genres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  {
+    "appid": 1091500,
+    "name": "Cyberpunk 2077",
+    "time_played": 4642,
+    "genres": [
+      "RPG"
+    ]
+  },
+  {
+    "appid": 1085660,
+    "name": "Destiny 2",
+    "time_played": 1161,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 1172470,
+    "name": "Apex Legends",
+    "time_played": 1361,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 1237970,
+    "name": "Titanfall® 2",
+    "time_played": 19,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "appid": 1245620,
+    "name": "ELDEN RING",
+    "time_played": 852,
+    "genres": [
+      "Action",
+      "RPG"
+    ]
+  },
+  {
+    "appid": 1281930,
+    "name": "tModLoader",
+    "time_played": 6,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 1468260,
+    "name": "Leaf Blower Revolution - Idle Game",
+    "time_played": 31,
+    "genres": [
+      "Casual",
+      "Indie",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 1607250,
+    "name": "MY HERO ULTRA RUMBLE",
+    "time_played": 19,
+    "genres": [
+      "Acción",
+      "Casual",
+      "Free to Play"
+    ]
+  },
+  {
+    "appid": 1623730,
+    "name": "Palworld",
+    "time_played": 1537,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG",
+      "Early Access"
+    ]
+  },
+  {
+    "appid": 1687950,
+    "name": "Persona 5 Royal",
+    "time_played": 2931,
+    "genres": [
+      "RPG"
+    ]
+  },
+  {
+    "appid": 1240440,
+    "name": "Halo Infinite",
+    "time_played": 82,
+    "genres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 1794680,
+    "name": "Vampire Survivors",
+    "time_played": 159,
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "RPG"
+    ]
+  },
+  {
+    "appid": 1818750,
+    "name": "MultiVersus",
+    "time_played": 43,
+    "genres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 578080,
+    "name": "PUBG: BATTLEGROUNDS",
+    "time_played": 34,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 1196590,
+    "name": "Resident Evil Village",
+    "time_played": 693,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "appid": 1236300,
+    "name": "Resident Evil Re:Verse",
+    "time_played": 0,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "appid": 1599340,
+    "name": "Lost Ark",
+    "time_played": 212,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 1966720,
+    "name": "Lethal Company",
+    "time_played": 594,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "Early Access"
+    ]
+  },
+  {
+    "appid": 1973530,
+    "name": "Limbus Company",
+    "time_played": 551,
+    "genres": [
+      "Action",
+      "RPG",
+      "Strategy"
+    ]
+  },
+  {
+    "appid": 2074920,
+    "name": "The First Descendant",
+    "time_played": 30,
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 2139460,
+    "name": "Once Human",
+    "time_played": 29,
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG",
+      "Simulation",
+      "Strategy",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 2679460,
+    "name": "Metaphor: ReFantazio",
+    "time_played": 5579,
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ]
+  },
+  {
+    "appid": 2881650,
+    "name": "Content Warning",
+    "time_played": 123,
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Indie"
+    ]
+  },
+  {
+    "appid": 440,
+    "name": "Team Fortress 2",
+    "time_played": 227,
+    "genres": [
+      "Action",
+      "Free To Play"
+    ]
+  },
+  {
+    "appid": 570,
+    "name": "Dota 2",
+    "time_played": 310,
+    "genres": [
+      "Action",
+      "Strategy",
+      "Free To Play"
+    ]
+  }
+]
