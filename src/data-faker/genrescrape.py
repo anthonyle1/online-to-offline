@@ -2,6 +2,7 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 
 #ik global variables r ugly but pls spare me
+# this was the remains... lets not talk about it...
 games = {}
 game_id = {}
 
